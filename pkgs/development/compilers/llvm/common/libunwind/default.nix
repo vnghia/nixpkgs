@@ -11,8 +11,8 @@
   ninja,
   python3,
   libcxx,
-  enableShared ? !stdenv.hostPlatform.isStatic,
-  doFakeLibgcc ? stdenv.hostPlatform.useLLVM && !stdenv.hostPlatform.isStatic,
+  enableShared ? false,
+  doFakeLibgcc ? false,
   devExtraCmakeFlags ? [ ],
   getVersionFile,
 }:
